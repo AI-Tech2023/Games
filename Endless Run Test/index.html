@@ -110,40 +110,6 @@
         <script>window.onload = GameMaker_Init;</script>
 
         <!-- Builtin injector for injecting google analytics code -->
-        
-        <!-- This here is by AIT to adapt window size -->
-        <script>
-            function resizeGame() {
-                var gameArea = document.getElementById('gm4html5_div_id');
-                var widthToHeight = 1920 / 1080;
-                var newWidth = window.innerWidth;
-                var newHeight = window.innerHeight;
-                var newWidthToHeight = newWidth / newHeight;
-                
-                if (newWidthToHeight > widthToHeight) {
-                    newWidth = newHeight * widthToHeight;
-                    gameArea.style.height = newHeight + 'px';
-                    gameArea.style.width = newWidth + 'px';
-                } else {
-                    newHeight = newWidth / widthToHeight;
-                    gameArea.style.width = newWidth + 'px';
-                    gameArea.style.height = newHeight + 'px';
-                }
-                
-                gameArea.style.marginTop = (-newHeight / 2) + 'px';
-                gameArea.style.marginLeft = (-newWidth / 2) + 'px';
-                gameArea.style.position = 'absolute';
-                gameArea.style.top = '50%';
-                gameArea.style.left = '50%';
-
-                var canvas = document.getElementById('canvas');
-                canvas.width = newWidth;
-                canvas.height = newHeight;
-            }
-
-            window.addEventListener('resize', resizeGame, false);
-            window.addEventListener('load', resizeGame, false);
-        </script>
 
     </body>
 
